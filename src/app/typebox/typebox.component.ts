@@ -8,39 +8,63 @@ import { lorem } from 'faker';
 })
 export class TypeboxComponent implements OnInit {
 
-  randomText = lorem.words();
+  randomText = '';
   success = false;
   enteredText = '';
-  timer = 20
+  timer = 0
+  exit_flag = true
+  score = 0
   constructor() { }
 
   ngOnInit(): void {
 
-    this.onTimer()
   }
+
 
   onTimer(){
     let tim = setInterval(()=>{
-      if(this.timer > 0 && this.success === false){
-      console.log(this.timer)
+      if(this.timer > 0 && this.success === false && this.exit_flag === false){
       this.timer--;
       }else{
-        clearInterval(tim);
-        this.success = false
-        this.randomText = lorem.words();
-        this.enteredText = '';
-        this.timer = 20;   
-        this.onTimer();     
+        // console.log(this.exit_flag)
+          if(!this.exit_flag){
+            console.log(this.exit_flag)
+            clearInterval(tim);
+            this.success = false
+            this.enteredText = '';   
+            this.onStartClick();     
+        }else{
+        clearInterval(tim);     
       }
+    }
     },1000)
   }
 
+  onStartClick(){
+    this.randomText = lorem.words();
+    this.timer = 15;
+    this.exit_flag = false
+    this.onTimer();
+  }
+
+  onStopClick(){
+    this.exit_flag = true;
+  }
+
+  onReset(){
+    this.score = 0;
+    this.timer = 0;
+    this.exit_flag = true;
+    this.enteredText = '';
+    this.randomText = '';
+  }
   
   onInput(value: string){
     this.enteredText = value;
 
     if(this.enteredText === this.randomText){
       this.success = true
+      this.score++;
     }
   }
 
