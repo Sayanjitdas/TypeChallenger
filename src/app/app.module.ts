@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TypeboxComponent } from './typebox/typebox.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TypeboxComponent
   ],
   imports: [
     BrowserModule,
