@@ -6,9 +6,9 @@
                 <span><button class="btn btn-default" (click)="onReset()">RESET</button></span>
                 <span class="m-2">TIMER: {{timer}}</span>
             </p>
-            <p class="h2">TYPE CHALLENGER</p>
+            <h4>TYPE CHALLENGER</h4>
             <div style="height:40px  !important;">
-                <p style="margin-bottom: 0px;">
+                <p style="font-size: 16px; margin-bottom: 0px;">
                     <span [class] ="compare(item,enteredText[i])" *ngFor="let item of randomText.split('');let i = index">{{item}}</span>  
                 </p>
             </div>
