@@ -62,7 +62,7 @@ export class TypeboxComponent implements OnInit {
   onInput(value: string){
     this.enteredText = value;
 
-    if(this.enteredText === this.randomText){
+    if(this.enteredText === this.randomText && this.enteredText.length > 0){
       this.success = true
       this.score++;
     }

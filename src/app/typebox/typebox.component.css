@@ -2,10 +2,12 @@
     width: auto;
     height: 50vh;
     /* border: 1px solid rgb(155, 155, 155); */
-    box-shadow: 10px 10px 10px -4px rgb(197, 197, 204), inset 10px 10px 10px -5px rgb(196, 196, 202);
+    box-shadow: 10px 10px 10px -5px rgb(209, 209, 230), inset 10px 10px 10px -5px rgb(209, 209, 230);
     border-radius: 10px;
     margin: 10rem auto;
 }
+
+
 
 .pending{
     color: inherit;
@@ -17,4 +19,32 @@
 
 .green {
     color: green;
+}
+
+.myinput{
+    background-color: rgb(232, 232, 255);
+    border: none;
+    box-shadow: inset 10px 10px 10px -7px rgb(209, 209, 230),10px 10px 10px -7px rgb(209, 209, 230);
+    border-radius: 10px;
+}
+
+.mybtn {
+    border: none;
+    background-color: rgb(232, 232, 255);
+    padding: 15px;
+    border-radius: 100%;
+    box-shadow: inset 10px 10px 20px -7px rgb(209, 209, 230),10px 10px 20px -7px rgb(209, 209, 230);
+    transition: box-shadow 4s;
+}
+
+.mybtn:hover {
+    box-shadow: 10px 10px 20px -7px rgb(209, 209, 230), inset 10px 10px 20px 7px rgb(209, 209, 230);
+    
+}
+
+
+@media only screen and (max-width:600px){
+    p{
+        font-size: 15px;
+    }
 }

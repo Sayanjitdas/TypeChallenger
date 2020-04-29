@@ -6,20 +6,20 @@
                 <span><button class="btn btn-default" (click)="onReset()">RESET</button></span>
                 <span class="m-2">TIMER: {{timer}}</span>
             </p>
-            <p class="h2">TYPEWRITER</p>
+            <p class="h2">TYPE CHALLENGER</p>
             <div style="height:40px  !important;">
                 <p style="margin-bottom: 0px;">
                     <span [class] ="compare(item,enteredText[i])" *ngFor="let item of randomText.split('');let i = index">{{item}}</span>  
                 </p>
             </div>
 
-            <input class="form-control w-auto" type="text" (input)="onInput($event.target.value)" [value]="enteredText">
+            <input class="form-control w-auto myinput" type="text" (input)="onInput($event.target.value)" [value]="enteredText">
             <div style="height:40px  !important;">
                 <p class="" *ngIf="success">Success!!</p>
             </div>
             <div>
-                <span class="m-4"><button class="btn btn-success" (click)="onStartClick()" [disabled]="!exit_flag">START</button></span>
-                <span class="m-4"> <button class="btn btn-danger" (click)="onStopClick()">STOP</button></span>     
+                <span class="m-4"><button class="mybtn" (click)="onStartClick()" [disabled]="!exit_flag">START</button></span>
+                <span class="m-4"> <button class="mybtn" (click)="onStopClick()">STOP</button></span>     
             </div>        
         </div>
     </div>
